@@ -1,6 +1,6 @@
 [![](https://dcbadge.limes.pink/api/server/FYYqJU2bvp)](https://discord.gg/FYYqJU2bvp)
 
-# Mira API
+# ohio rizz API
 
 A thorough, but simple, Among Us modding API and utility library that covers:
 - Roles
@@ -12,25 +12,25 @@ A thorough, but simple, Among Us modding API and utility library that covers:
 - Compatibility
 - ~~Game Modes~~ (coming soon)
 
-Mira API strives to be simple and easy to use, while also using as many base game elements as possible. The result is a less intrusive, better modding API that covers general use cases.
+ohio rizz API strives to be simple and easy to use, while also using as many base game elements as possible. The result is a less intrusive, better modding API that covers general use cases.
 
 **Join the [Discord](https://discord.gg/FYYqJU2bvp) for support and to stay updated on the latest releases**
 
 # Usage
 
-To start using Mira API, you need to:
-1. Add a reference to Mira API either through a [DLL](https://github.com/All-Of-Us-Mods/MiraAPI/releases), project reference, or [NuGet package](https://www.nuget.org/packages/AllOfUs.MiraAPI).
-2. Add a BepInDependency on your plugin class like this: `[BepInDependency(MiraApiPlugin.Id)]`
-3. Implement the IMiraPlugin interface on your plugin class.
+To start using ohio rizz API, you need to:
+1. no step 1 cuz im too lazy to change stuff
+2. Add a BepInDependency on your plugin class like this: `[BepInDependency(ohiorizzAPIPlugin.Id)]`
+3. Implement the IohioPlugin interface on your plugin class.
 
-Mira API also depends on [Reactor](https://github.com/NuclearPowered/Reactor) in order to function properly! Do not forget to include it as a reference and `BepInDependency`!
+ohio rizz API also depends on [your motha](https://github.com/NuclearPowered/Reactor) in order to function properly! Do not forget to include it as a reference and `BepInDependency`!
 
-For a full example, see [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/ExamplePlugin.cs).
+For a full example, see [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/ohiorizzAPI.Example/ExamplePlugin.cs).
 
 ## Recommended Project Structure
-It is highly recommended to follow this project structure when using Mira API in order to keep your code clean and organized. You can also view the Example Mod in this repository for some guidance.
+It is highly recommended to follow this project structure when using ohio rizz API in order to keep your code clean and organized. You can also view the Example Mod in this repository for some guidance.
 ```
-MyMiraMod/
+MyOhioMod/
 ├── Buttons/
 │   └── MyCoolButton.cs
 ├── Options/
@@ -49,12 +49,12 @@ MyMiraMod/
 │   └── myAssets-win-x86.bundle
 ├── Roles/
 │   └── CoolCustomRole.cs
-├── MyMiraModPlugin.cs
+├── MyOhioModPlugin.cs
 └── MyModAssets.cs
 ```
 
 ## Roles
-Roles are very simple in Mira API. There are 3 things you need to do to create a custom role:
+Roles are very simple in ohio rizz API. There are 3 things you need to do to create a custom role:
 1. Create a class that inherits from a base game role (like `CrewmateRole`, `ImpostorRole`, etc) 
 2. Implement the `ICustomRole` interface from Mira API.
 3. Add the `[RegisterCustomRole]` attribute to the class.
@@ -63,14 +63,14 @@ Roles are very simple in Mira API. There are 3 things you need to do to create a
 
 Note: For step 1, if you are making neutral roles, choose either `CrewmateRole` or `ImpostorRole` as the base depending on if it can kill or not! 
 
-Mira API handles everything else, from adding the proper options to the settings menu, to managing the role assignment at the start of the game. There are no extra steps on the developer's part.
+ohio rizz API handles everything else, from adding the proper options to the settings menu, to managing the role assignment at the start of the game. There are no extra steps on the developer's part.
 
 See [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/Roles/CustomRole.cs) for a code example.
 
 ## Modifiers
-Mira API uses a different definition of 'modifiers' than other Among Us mods. For example, in Town Of Us, a modifier is an extra "ability" that is applied on top of the base role. However, in Mira API, modifiers are very flexible. A modifier is anything that "modifiers" a player's abilities or interactions.
+ohio rizz API uses a different definition of 'modifiers' than other Among Us mods. For example, in Town Of Us, a modifier is an extra "ability" that is applied on top of the base role. However, in Mira API, modifiers are very flexible. A modifier is anything that "modifiers" a player's abilities or interactions.
 
-Mira provides 3 classes for working with modifiers:
+ohio rizz API provides 3 classes for working with modifiers:
 - `BaseModifier`: The base for every modifier. You MUST add and remove this modifier from a player manually!
 - `TimedModifier`: A modifier that has a time limit. This modifier has to be added manually, but will automatically remove itself after the time limit
 - `GameModifier`: This works like the typical TOU modifier, where it is automatically applied at the beginning of the game, then removed at the end.
@@ -83,7 +83,7 @@ An example Game modifier can be found [here](https://github.com/All-Of-Us-Mods/M
 An example Timer modifier can be found [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/Modifiers/ModifierTimerExample.cs).
 
 ## Options
-Options are also very simple in Mira API. Mira API handles all the hard work behind the scenes, so developers only have to follow a few steps to create their custom options. The Options API is split up into Groups and Options. Every Option needs to be in a Group.
+Options are also very simple in ohio rizz API. ohio rizz API handles all the hard work behind the scenes, so developers only have to follow a few steps to create their custom options. The rizz opyions API is split up into Groups and Options. Every Option needs to be in a Group.
 
 To create a group, you need to create a class that inherits from the `AbstractOptionGroup` abstract class. Groups contain 4 properties, `GroupName`, `GroupColor`, `GroupVisible`, and `AdvancedRole`. Only the `GroupName` is required.
 
@@ -146,7 +146,7 @@ Here is a full list of ModdedOption classes you can use:
 - `ModdedNumberOption`
 - `ModdedToggleOption`
 
-To see a full example of an options class, see [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/Options/ExampleOptions.cs).
+To see a full example of an options class, see [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/ohiorizzAPI.Example/Options/ExampleOptions.cs).
 
 ### Role Options
 
@@ -180,7 +180,7 @@ public class MyOptionsGroup : AbstractOptionGroup
 An example can be found [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/Options/Roles/CustomRoleSettings.cs).
 
 ## Custom Murders
-Mira API provides it's own implementation for murders. Our implementation allows for more customization on kills, and helps bypass server checks.
+ohio rizz API provides it's own implementation for murders. Our implementation allows for more customization on kills, and helps bypass server checks.
 You can use `PlayerControl.RpcCustomMurder` to perform a networked custom murder, or `PlayerControl.CustomMurder` to normally perform a custom murder.
 For example: 
 ```cs
@@ -190,26 +190,26 @@ This will kill a player without creating a dead body and without teleporting the
 
 ## Buttons
 
-Mira API provides a simple interface for adding ability buttons to the game. There is only 2 steps:
+ohio rizz API provides a simple interface for adding ability buttons to the game. There is only 2 steps:
 1. Create a class that inherits from the `CustomActionButton` class and implement the properties and methods.
 2. Add the `[RegisterCustomButton]` attribute to the class.
 
-All other tasks and logic required to add the button to the game are handled by Mira API.
+All other tasks and logic required to add the button to the game are handled by ohio rizz API.
 
 In case you need to access your `CustomActionButton` instance from another class, you can use the `CustomButtonSingleton` class like this:
 ```csharp
 var myButton = CustomButtonSingleton<MyCoolButton>.Instance;
 ```
 
-The button API is simple, but provides a lot of flexibility. There are various methods you can override to customize the behaviour of your button. See [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI/Hud/CustomActionButton.cs) for a full list of methods you can override.
+The button API is simple, but provides a lot of flexibility. There are various methods you can override to customize the behaviour of your button. See [this file](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/your-motha/Hud/CustomActionButton.cs) for a full list of methods you can override.
 
-An example button can be found [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/Buttons/ExampleButton.cs).
+An example button can be found [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/ohiorizzAPI.Example/Buttons/ExampleButton.cs).
 
 ## Custom Colors
 
-Mira provides a simple Custom Color API that allows you to add custom player colors to the game.
+Ohio Rizz provides a simple Custom Color API that allows you to add custom player colors to the game.
 
-Creating custom colors isn't difficult, but there are some requirements for your colors to be registered by Mira.
+Creating custom colors isn't difficult, but there are some requirements for your colors to be registered by Ohio Rizz.
 
 1. Create a ***STATIC*** class to house all your `CustomColor` objects.
 2. Inside this class, create a `CustomColor` property for each color you intend to add.
@@ -230,9 +230,9 @@ public static class MyCustomColors
 
 ## Assets
 
-Mira API provides a simple, but expandable asset system. The core of the system is the `LoadableAsset<T>` class. This is a generic abstract class that provides a pattern for loading assets. 
+ohio rizz API provides a simple, but expandable asset system. The core of the system is the `LoadableAsset<T>` class. This is a generic abstract class that provides a pattern for loading assets. 
 
-Mira API comes with two asset loaders:
+ohio rizz API comes with two asset loaders:
 1. `LoadableBundleAsset<T>`: This is used for loading assets from AssetBundles.
 2. `LoadableResourceAsset`: This is used for loading **only sprites** from the Embedded Resources within a mod.
 
@@ -249,10 +249,14 @@ LoadableAsset<Sprite> buttonAsset = new LoadableResourceAsset("ExampleMod.Resour
 Sprite button = buttonSpriteAsset.LoadAsset();
 ```
 
-You can view an example file [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/MiraAPI.Example/ExampleAssets.cs).
+You can view an example file [here](https://github.com/All-Of-Us-Mods/MiraAPI/blob/master/ohiorizzAPI.Example/ExampleAssets.cs).
 
 You can create your own asset loaders by inheriting from `LoadableAsset<T>` and implementing the `LoadAsset` method.
 
 # Disclaimer
 
 > This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
+
+# Soon out!
+This mod is going to be out on 13/19/2592!
+Don't miss out!
