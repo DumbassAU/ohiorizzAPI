@@ -1,5 +1,3 @@
-[![](https://dcbadge.limes.pink/api/server/FYYqJU2bvp)](https://discord.gg/FYYqJU2bvp)
-
 # ohio rizz API
 
 A thorough, but simple, Among Us modding API and utility library that covers:
