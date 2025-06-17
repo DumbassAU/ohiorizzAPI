@@ -54,7 +54,7 @@ MyOhioMod/
 ## Roles
 Roles are very simple in ohio rizz API. There are 3 things you need to do to create a custom role:
 1. Create a class that inherits from a base game role (like `CrewmateRole`, `ImpostorRole`, etc) 
-2. Implement the `ICustomRole` interface from Mira API.
+2. Implement the `ICustomRole` interface from ohiorizz API.
 3. Add the `[RegisterCustomRole]` attribute to the class.
 
 **Disclaimer: Make sure your plugin class has the following attribute `[ReactorModFlags(ModFlags.RequireOnAllClients)]` or else your roles will not register correctly.**
